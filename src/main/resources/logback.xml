@@ -10,8 +10,13 @@
 
     <logger name="org.springframework" level="INFO"/>
     <logger name="com.jisoo.spring" level="DEBUG"/>
+    <logger name="java.sql" level="ERROR" />
+    <logger name="jdbc.sqlonly" level="DEBUG" />
+    <logger name="jdbc.sqltiming" level="DEBUG" />
+    <logger name="jdbc.audit" level="ERROR" />
+    <logger name="jdbc.resultset" level="ERROR" />
+
     <root level="INFO">
         <appender-ref ref="console"/>
     </root>
 </configuration>
-f
