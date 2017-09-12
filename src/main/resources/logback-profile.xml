@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+    <if condition='isDefined("spring.profiles.active")'>
+        <then>
+            <if condition='"${spring.profiles.active}".contains("test")'>
+                <then>
+                    <include resource="logback.test.xml" />
+                </then>
+            </if>
+            <if condition='"${spring.profiles.active}".contains("local")'>
+                <then>
+                    <include resource="logback.local.xml" />
+                </then>
+            </if>
+            <if condition='"${spring.profiles.active}".contains("server")'>
+                <then>
+                    <include resource="logback.server.xml" />
+                </then>
+            </if>
+        </then>
+        <else>
+            <include resource="logback.default.xml" />
+        </else>
+    </if>
+</configuration>
