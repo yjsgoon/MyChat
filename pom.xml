@@ -17,6 +17,7 @@
     <logback.version>1.2.3</logback.version>
     <janino.version>2.7.8</janino.version>
     <log4jdbc.version>1.2</log4jdbc.version>
+    <freemarker.version>2.3.23</freemarker.version>
   </properties>
 
   <dependencies>
@@ -26,6 +27,7 @@
       <version>${spring.version}</version>
     </dependency>
 
+    <!-- Util Dependencies -->
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>servlet-api</artifactId>
@@ -46,6 +48,7 @@
       <scope>provided</scope>
     </dependency>
 
+    <!-- Log관련 Dependencies -->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>jcl-over-slf4j</artifactId>
@@ -53,7 +56,6 @@
       <scope>runtime</scope>
     </dependency>
 
-    <!-- log관련 depedencies -->
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
@@ -78,6 +80,19 @@
       <groupId>org.codehaus.janino</groupId>
       <artifactId>janino</artifactId>
       <version>${janino.version}</version>
+    </dependency>
+
+    <!-- Freemarker 적용하기 -->
+    <dependency>
+      <groupId>org.freemarker</groupId>
+      <artifactId>freemarker</artifactId>
+      <version>${freemarker.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context-support</artifactId>
+      <version>${spring.version}</version>
     </dependency>
 
   </dependencies>
